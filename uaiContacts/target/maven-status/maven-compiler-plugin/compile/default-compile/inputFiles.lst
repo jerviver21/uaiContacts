@@ -1,0 +1,13 @@
+/home/jerviver21/git/uaiContacts/uaiContacts/src/main/java/uaiContacts/model/Role.java
+/home/jerviver21/git/uaiContacts/uaiContacts/src/main/java/uaiContacts/controller/LoginController.java
+/home/jerviver21/git/uaiContacts/uaiContacts/src/main/java/uaiContacts/service/UserService.java
+/home/jerviver21/git/uaiContacts/uaiContacts/src/main/java/uaiContacts/repository/UserRepository.java
+/home/jerviver21/git/uaiContacts/uaiContacts/src/main/java/uaiContacts/controller/ContactsController.java
+/home/jerviver21/git/uaiContacts/uaiContacts/src/main/java/uaiContacts/controller/HomeController.java
+/home/jerviver21/git/uaiContacts/uaiContacts/src/main/java/uaiContacts/controller/IndexController.java
+/home/jerviver21/git/uaiContacts/uaiContacts/src/main/java/uaiContacts/vo/ContactListVO.java
+/home/jerviver21/git/uaiContacts/uaiContacts/src/main/java/uaiContacts/model/User.java
+/home/jerviver21/git/uaiContacts/uaiContacts/src/main/java/uaiContacts/model/Contact.java
+/home/jerviver21/git/uaiContacts/uaiContacts/src/main/java/uaiContacts/interceptor/LoginInterceptor.java
+/home/jerviver21/git/uaiContacts/uaiContacts/src/main/java/uaiContacts/service/ContactService.java
+/home/jerviver21/git/uaiContacts/uaiContacts/src/main/java/uaiContacts/repository/ContactRepository.java

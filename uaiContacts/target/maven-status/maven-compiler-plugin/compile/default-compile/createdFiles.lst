@@ -1,0 +1,13 @@
+uaiContacts/model/Role.class
+uaiContacts/controller/HomeController.class
+uaiContacts/controller/LoginController.class
+uaiContacts/controller/ContactsController.class
+uaiContacts/repository/ContactRepository.class
+uaiContacts/controller/IndexController.class
+uaiContacts/repository/UserRepository.class
+uaiContacts/model/User.class
+uaiContacts/service/ContactService.class
+uaiContacts/service/UserService.class
+uaiContacts/interceptor/LoginInterceptor.class
+uaiContacts/vo/ContactListVO.class
+uaiContacts/model/Contact.class
