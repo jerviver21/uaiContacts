@@ -5,7 +5,7 @@
 <div class="row-fluid" ng-controller="contactsController">
     <h2>
         <p class="text-center">
-            <spring:message code='contacts.header'/>
+            Cambios!!!
             <a href="#searchContactsModal"
                id="contactsHeaderButton"
                role="button"

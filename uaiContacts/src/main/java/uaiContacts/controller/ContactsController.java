@@ -39,7 +39,7 @@ public class ContactsController {
  
     @RequestMapping(method = RequestMethod.GET)
     public ModelAndView welcome() {
-        return new ModelAndView("contactsList");
+		return new ModelAndView("contactsList");
     }
  
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")

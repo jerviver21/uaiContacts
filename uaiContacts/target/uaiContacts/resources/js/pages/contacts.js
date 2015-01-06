@@ -41,7 +41,10 @@ function contactsController($scope, $http) {
         if (data.pagesCount > 0) {
             $scope.state = 'list';
 
-            $scope.page = {source: data.contacts, currentPage: $scope.pageToGet, pagesCount: data.pagesCount, totalContacts : data.totalContacts};
+            $scope.page = {	source: data.contacts, 
+            				currentPage: $scope.pageToGet, 
+            				pagesCount: data.pagesCount, 
+            				totalContacts : data.totalContacts};
 
             if($scope.page.pagesCount <= $scope.page.currentPage){
                 $scope.pageToGet = $scope.page.pagesCount - 1;
