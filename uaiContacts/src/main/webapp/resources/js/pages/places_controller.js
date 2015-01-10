@@ -1,16 +1,40 @@
 function placesController($scope, $http) {
-	var url = "/uaiContacts/protected/places/"
-	var config = {params: {}};
+	$scope.url = "/uaiContacts/protected/places/"
+	$scope.config = {params: {}};
 	
 	$scope.state='init';
 	$scope.placesList=[];
-		
-
-	$http.get(url, config).success(function(response) {
-		$scope.state='list';
-		$scope.placesList = response;
-	}).error(function() {
-		$scope.state='error';
-	});
 	
+	
+	
+	$scope.getPlacesList = function () {
+		var url = $scope.url;
+		var config = $scope.config;
+		
+		$http.get(url, config).success(function(response) {
+			$scope.state='list';
+			$scope.placesList = response;
+		}).error(function() {
+			$scope.state='error';
+		});
+	}
+	
+	
+	
+	$scope.searchPlace = function(searchPlaceForm) {
+		var url = $scope.url +  $scope.searchFor;
+		var config = $scope.config;
+		
+		$http.get(url, config).success(function(response) {
+			$scope.state='list';
+			$scope.placesList = response;
+		}).error(function() {
+			$scope.state='error';
+		});
+		
+		$("#searchPlacesModal").modal('hide');
+	}
+	
+	
+	$scope.getPlacesList();
 }

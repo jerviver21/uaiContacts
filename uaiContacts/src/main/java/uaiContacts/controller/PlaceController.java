@@ -2,7 +2,9 @@ package uaiContacts.controller;
 
 
 import java.util.List;
+import java.util.Locale;
 
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,10 +15,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import uaiContacts.model.Place;
 import uaiContacts.service.PlaceService;
+import uaiContacts.vo.ContactListVO;
 
 
 @Controller
@@ -65,10 +69,16 @@ public class PlaceController {
 		return getAllPlaces();
 	}
 	
+	@RequestMapping(value = "/{name}", method = RequestMethod.GET, produces = "application/json")
+    public ResponseEntity<?> search(@PathVariable("name") String name) {
+		List<Place> places  = service.findByPhoneLike(name);
+        return new ResponseEntity<List<Place>>(places, HttpStatus.OK);
+    }
 	
 	
 	
 	public ResponseEntity<List<Place>> getAllPlaces(){
+		System.out.println("Actualizad.... JVA 2015-01-10");
 		List<Place> places = service.findAll();
 		return new ResponseEntity<List<Place>>(places, HttpStatus.OK);
 	}

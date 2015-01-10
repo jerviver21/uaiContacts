@@ -34,7 +34,9 @@ public class PlaceService {
 		repository.delete(id);
 	}
 	
-	
+	public List<Place> findByPhoneLike(String phone){
+		return repository.findByPhoneLike("%"+phone+"%");
+	}
 
 	public PlaceRepository getRepository() {
 		return repository;
