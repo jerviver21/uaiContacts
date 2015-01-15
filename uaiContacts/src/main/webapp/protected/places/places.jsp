@@ -10,11 +10,13 @@
 	<h2>
 		<p class="text-center">
 			Places
+			
 			<a href="#searchPlacesModal" id="placesHeaderButton" role="button" class="btn btn-inverse" data-toggle="modal">
 				<i class="icon-search"></i>
-			</a>
+			</a>			
 		</p>
 	</h2>
+	
 	<!-- Table with the list of places, accesing $scope.placesList from controller -->
 	<div id="gridContainer" ng-class="{'': state == 'list', 'none': state != 'list'}">
        <table class="table table-bordered table-striped">
@@ -33,6 +35,12 @@
            </tr>
            </tbody>
        </table>
+    </div>
+    <br/>
+    <div class="text-center">
+    	<a href="#createPlaceModal" id="placesCreateHeaderButton" role="button" class="btn btn-inverse" data-toggle="modal">
+    		<i class="icon-plus"></i>
+    	</a>
     </div>
     
     <!-- Include of dialogs for operations such as update, create and search -->

@@ -35,6 +35,21 @@ function placesController($scope, $http) {
 		$("#searchPlacesModal").modal('hide');
 	}
 	
+	$scope.createPlace = function(createPlaceForm) {
+		var url = $scope.url;
+		var config = {headers: {'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'}};
+		
+		$http.post(url, $.param($scope.place), config).success(function(response) {
+			$scope.state='list';
+			$scope.placesList = response;
+		}).error(function() {
+			$scope.state='error';
+		})
+		
+		$("#createPlaceModal").modal('hide');
+		
+	}
+	
 	
 	$scope.getPlacesList();
 }

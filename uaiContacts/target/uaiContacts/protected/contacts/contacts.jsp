@@ -5,7 +5,7 @@
 <div class="row-fluid" ng-controller="contactsController">
     <h2>
         <p class="text-center">
-            Cambios!!!
+        	Contacts
             <a href="#searchContactsModal"
                id="contactsHeaderButton"
                role="button"
