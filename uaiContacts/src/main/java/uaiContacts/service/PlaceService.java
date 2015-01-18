@@ -30,7 +30,7 @@ public class PlaceService {
 	}
 	
 	@Secured("ROLE_ADMIN")
-	public void delete(Integer id){
+	public void delete(Long id){
 		repository.delete(id);
 	}
 	

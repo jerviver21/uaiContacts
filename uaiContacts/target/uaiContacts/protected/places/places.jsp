@@ -10,11 +10,13 @@
 	<h2>
 		<p class="text-center">
 			Places
+			
 			<a href="#searchPlacesModal" id="placesHeaderButton" role="button" class="btn btn-inverse" data-toggle="modal">
 				<i class="icon-search"></i>
-			</a>
+			</a>			
 		</p>
 	</h2>
+	
 	<!-- Table with the list of places, accesing $scope.placesList from controller -->
 	<div id="gridContainer" ng-class="{'': state == 'list', 'none': state != 'list'}">
        <table class="table table-bordered table-striped">
@@ -23,6 +25,7 @@
                <th scope="col">Address</th>
                <th scope="col">Phone</th>
                <th scope="col">Size</th>
+               <th scope="col"></th>
            </tr>
            </thead>
            <tbody>
@@ -30,19 +33,33 @@
                <td class="tdContactsCentered">{{place.address}}</td>
                <td class="tdContactsCentered">{{place.phone}}</td>
                <td class="tdContactsCentered">{{place.size}}</td>
+               <td class="width15">
+                    <div class="text-center">
+                        <input type="hidden" value="{{place.id}}"/>
+                        <a href="#updatePlaceModal"
+                           ng-click="selectedPlace(place);"
+                           role="button"
+                           title="<spring:message code="update"/>&nbsp;<spring:message code="place"/>"
+                           class="btn btn-inverse" data-toggle="modal">
+                            <i class="icon-pencil"></i>
+                        </a>
+                        <a href="#deletePlaceModal"
+                           ng-click="selectedPlace(place);"
+                           role="button"
+                           title="<spring:message code="delete"/>&nbsp;<spring:message code="place"/>"
+                           class="btn btn-inverse" data-toggle="modal">
+                            <i class="icon-minus"></i>
+                        </a>
+                    </div>
+                </td>
            </tr>
            </tbody>
        </table>
     </div>
     <br/>
     <div class="text-center">
-    	<a 	href="#createPlaceModal"
-    		role="button"
-    		title="Create Place"
-    		class="btn btn-inverse"
-    		data-togle="modal">
-    		<i class="icon plus"/>
-    		Create Place
+    	<a href="#createPlaceModal" id="placesCreateHeaderButton" role="button" class="btn btn-inverse" data-toggle="modal">
+    		<i class="icon-plus"></i>
     	</a>
     </div>
     

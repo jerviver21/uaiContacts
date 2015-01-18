@@ -58,7 +58,7 @@ public class PlaceController {
 	
 	
 	@RequestMapping(value="/{id}", method=RequestMethod.DELETE, produces="application/json")
-	public ResponseEntity<?> delete(@PathVariable("id") int placeId){
+	public ResponseEntity<?> delete(@PathVariable("id") Long placeId){
 		try {
 			service.delete(placeId);
 		} catch (AccessDeniedException e) {
@@ -78,7 +78,6 @@ public class PlaceController {
 	
 	
 	public ResponseEntity<List<Place>> getAllPlaces(){
-		System.out.println("Actualizad.... JVA 2015-01-10");
 		List<Place> places = service.findAll();
 		return new ResponseEntity<List<Place>>(places, HttpStatus.OK);
 	}
